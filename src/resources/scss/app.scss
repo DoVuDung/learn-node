@@ -1,0 +1,21 @@
+@import 'variables';
+app {
+    font-size: 1rem;
+    background-color: bisque;
+    color: red;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $yellow-color;
+    background-color: $red-color;
+}
+.row-items-m16{
+    margin-top: 16px;
+}
+.andy-avatar{
+    height: 28px;
+}
+.checkbox-select-all-option{
+    width: 160px ;
+    margin: 0 16px ;
+}

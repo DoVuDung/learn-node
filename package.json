@@ -1,0 +1,41 @@
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "học nodejs cơ bản nha",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful": "lint-staged",
+    "start": "nodemon --inspect src/index.js",
+    "watch-sass": "node-sass --watch src/resources/scss -o src/public/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "AndyDo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.2",
+    "mongoose-delete": "^0.5.3",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.9",
+    "prettier": "^2.3.2"
+  }
+}

@@ -1,0 +1,24 @@
+<div class="mt-4">
+  <h3>Cập nhật khóa học</h3>
+  {{!-- method mặc định khi không truyền đối với form validation là phương thức [GET] || có thể truyền post lên [POST], và duy nhất chỉ có thể sử dụng hai phương thức này --}}
+  <form class="mt-4" method="post" action="/courses/{{course._id}}?_method=PUT" role="form" enctype="application/x-www-form-urlencoded"> 
+    <div class="form-check">
+      <label for="name" >Tên khóa học</label>
+      <input type="text" class="form-control" value={{course.name}} id="name" name="name" />
+    </div>
+    <div class="form-check">
+      <label for="description" >Mô tả</label>
+      <textarea name="description" class="form-control"  id="description" name="description" >{{course.description}}</textarea>
+    </div>
+    <div class="form-check">
+      <label for="videoId" >Video ID</label>
+      <input type="text" class="form-control" value={{course.videoId}} id="videoId" name="videoId" />
+    </div>
+    <div class="form-check">
+      <label for="level" >Trình độ</label>
+      <input type="text" class="form-control" value={{course.level}} id="level" name="level" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Lưu khóa học</button>
+  </form>
+
+</div>
